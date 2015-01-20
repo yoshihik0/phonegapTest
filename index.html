@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<script>
+window.addEventListener("devicemotion", function(evt){
+  var x = evt.accelerationIncludingGravity.x;
+  var y = evt.accelerationIncludingGravity.y;
+  var z = evt.accelerationIncludingGravity.z;
+},true);
+$("#gra_x").text(x);
+$("#gra_y").text(y);
+$("#gra_z").text(z);
+
+</script>
+
+</head>
+<body>
+
+  <p>x軸<span id="gra_x">00</span></p>
+  <p>y軸<span id="gra_y">00</span></p>
+  <p>z軸<span id="gra_z">00</span></p>
+
+  <p></p>
+  <p></p>
+
+</body>
+</html>
